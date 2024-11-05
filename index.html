@@ -1,44 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Tip calculator app</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Tip calculator app</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-
-  Bill
-
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
-
-  Number of People
-
-  Tip Amount
-  / person
-
-  Total
-  / person
-
-  Reset
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <img class="logo" src="images/logo.svg" />
+      <section class="tip-calculator">
+        <section class="calculator-part">
+          <div class="bill-input">
+            <p>Bill</p>
+            <input class="dollar-input" type="number" placeholder="0" />
+          </div>
+          <section class="select-tip">
+            <p>Select Tip %</p>
+            <div class="select-tip-grid">
+              <button class="tip-selection">5%</button>
+              <button class="tip-selection">10%</button>
+              <button class="tip-selection">15%</button>
+              <button class="tip-selection">25%</button>
+              <button class="tip-selection">50%</button>
+              <input type="number" placeholder="Custom" />
+            </div>
+          </section>
+          <section class="number-of-people">
+            <p>Number of People</p>
+            <input class="person-input" type="number" placeholder="1" />
+          </section>
+        </section>
+        <section class="result-part">
+          <section class="tip-results">
+            <div class="result-per-person">
+              <a
+                ><p>Tip Amount</p>
+                <p class="a-person">/ person</p></a
+              >
+            </div>
+            <div class="tip-total">
+              <a
+                ><p>Total</p>
+                <p class="a-person">/ person</p></a
+              >
+            </div>
+            <button>Reset</button>
+          </section>
+        </section>
+      </section>
+    </main>
+    <footer>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Your Name Here</a>.
+      </div>
+    </footer>
+  </body>
 </html>
