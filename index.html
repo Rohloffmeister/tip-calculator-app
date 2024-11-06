@@ -12,6 +12,7 @@
       href="./images/favicon-32x32.png"
     />
     <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
     <title>Frontend Mentor | Tip calculator app</title>
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -27,27 +28,27 @@
   </head>
   <body>
     <main>
-      <img class="logo" src="images/logo.svg" />
+      <img alt="logo" class="logo" src="images/logo.svg" />
       <section class="tip-calculator">
         <section class="calculator-part">
           <div class="bill-input">
             <p>Bill</p>
-            <input class="dollar-input" type="number" placeholder="0" />
+            <input id="dollar-input" class="dollar-input" type="number" />
           </div>
           <section class="select-tip">
             <p>Select Tip %</p>
-            <div class="select-tip-grid">
-              <button class="tip-selection">5%</button>
-              <button class="tip-selection">10%</button>
-              <button class="tip-selection">15%</button>
-              <button class="tip-selection">25%</button>
-              <button class="tip-selection">50%</button>
-              <input type="number" placeholder="Custom" />
+            <div class="select-tip-grid" id="selection-grid">
+              <button class="tip-selection active" id="5%">5%</button>
+              <button class="tip-selection" id="10%">10%</button>
+              <button class="tip-selection" id="15%">15%</button>
+              <button class="tip-selection" id="25%">25%</button>
+              <button class="tip-selection" id="50%">50%</button>
+              <input  class="tip-selection" type="number" placeholder="Custom" />
             </div>
           </section>
           <section class="number-of-people">
             <p>Number of People</p>
-            <input class="person-input" type="number" placeholder="1" />
+            <input  id="people-input" class="person-input" type="number" />
           </section>
         </section>
         <section class="result-part">
@@ -57,14 +58,16 @@
                 ><p>Tip Amount</p>
                 <p class="a-person">/ person</p></a
               >
+              <p  class="results" id="tip-amount">$0.0</p>
             </div>
             <div class="tip-total">
               <a
                 ><p>Total</p>
                 <p class="a-person">/ person</p></a
               >
+            <p class="results" id ="tip-total">$0.0</p>
             </div>
-            <button>Reset</button>
+            <button id="reset-button">Reset</button>
           </section>
         </section>
       </section>
