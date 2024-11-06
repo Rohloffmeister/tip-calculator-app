@@ -11,8 +11,6 @@ let tipAmount = 0;
 let tipTotal = 0;
 let tipFactor = 0.05;
 
-dollarInput.value = 0;
-peopleInput.value = 1;
 
 function handleSelectionGrid(e) {
   if (
@@ -51,8 +49,8 @@ function handlePeopleInput(e) {
   populate();
 }
 function resetHandler(e){
-    dollarInput.value = 0;
-    peopleInput.value = 0;
+    dollarInput.value = null;
+    peopleInput.value = null;
     tipFactor = 0.05;
     Array.from(selectionGrid).forEach((element) =>{
         element.classList.remove("active");
