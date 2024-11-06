@@ -11,7 +11,6 @@ let tipAmount = 0;
 let tipTotal = 0;
 let tipFactor = 0.05;
 
-
 function handleSelectionGrid(e) {
   if (
     (e.target.tagName === "BUTTON" || e.target.tagName === "INPUT") &&
@@ -48,29 +47,28 @@ function handlePeopleInput(e) {
   calculate();
   populate();
 }
-function resetHandler(e){
-    dollarInput.value = null;
-    peopleInput.value = null;
-    tipFactor = 0.05;
-    Array.from(selectionGrid).forEach((element) =>{
-        element.classList.remove("active");
-      })
-    selectionGrid[0].classList.add("active");
-    populate();
-    
+function resetHandler(e) {
+  dollarInput.value = null;
+  peopleInput.value = null;
+  tipFactor = 0.05;
+  Array.from(selectionGrid).forEach((element) => {
+    element.classList.remove("active");
+  });
+  selectionGrid[0].classList.add("active");
+  populate();
 }
 
 function calculate() {
-  tipTotal = Math.round(dollar * tipFactor * 100) / 100;
-  tipAmount = Math.round(tipTotal / people * 100) / 100;
+    tipAmount = (Math.round(((dollar * tipFactor) / people )*100))/100;
+  tipTotal =
+    Math.round((tipAmount + dollar / people) * 100) / 100;
+
 }
 
 function populate() {
   tipTotalContainer.innerHTML = "$" + tipTotal.toString();
   tipAmountContainer.innerHTML = "$" + tipAmount.toString();
-
 }
-
 
 dollarInput.addEventListener("change", handleDollarInput);
 peopleInput.addEventListener("change", handlePeopleInput);
