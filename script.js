@@ -62,8 +62,12 @@ function resetHandler(e) {
 }
 
 function calculate() {
+    if(people < 1){
+      people = 1;
+    }
+
     tipAmount = (Math.round(((dollar * tipFactor) / people )*100))/100;
-  tipTotal =
+    tipTotal =
     Math.round((tipAmount + dollar / people) * 100) / 100;
 
 }
