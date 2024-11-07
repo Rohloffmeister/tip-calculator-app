@@ -48,8 +48,11 @@ function handlePeopleInput(e) {
   populate();
 }
 function resetHandler(e) {
+  dollar = 0;
   dollarInput.value = null;
   peopleInput.value = null;
+  tipAmount= 0;
+  tipTotal= 0;
   tipFactor = 0.05;
   Array.from(selectionGrid).forEach((element) => {
     element.classList.remove("active");
@@ -70,8 +73,8 @@ function populate() {
   tipAmountContainer.innerHTML = "$" + tipAmount.toString();
 }
 
-dollarInput.addEventListener("change", handleDollarInput);
-peopleInput.addEventListener("change", handlePeopleInput);
+dollarInput.addEventListener("input", handleDollarInput);
+peopleInput.addEventListener("input", handlePeopleInput);
 selectionGridContainer.addEventListener("click", handleSelectionGrid);
-selectionGridContainer.addEventListener("change", handleSelectionGrid);
+selectionGridContainer.addEventListener("input", handleSelectionGrid);
 resetButton.addEventListener("click", resetHandler);
